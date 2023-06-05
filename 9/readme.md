@@ -32,7 +32,17 @@ CMD ["python", "service1.py"]
 
 
 برای دور زدن تحریم داکر، از dns شکن استفاده کردیم. داکرفایل ها با دستور زیر بیلد شدند:
-​​docker build -t service1 .
+docker build -t service1 .
+
+![](statics/1.png)
+
+![](statics/2.png)
+
+![](statics/3.png)
+
+![](statics/4.png)
+
+![](statics/5.png)
 
 
 
