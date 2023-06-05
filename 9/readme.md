@@ -19,20 +19,25 @@ This is a response from service2
 ## تفسیر داکرفایل:
 ```dockerfile
 WORKDIR /code
-این خط بیانگر پوشه‌ی کار داکر است که در کانتینر ساخته شده، پوشه‌ی /code ساخته می‌شود و کارها در آن انجام می‌شود.
-#
-COPY ./requirements.txt /code/requirements.txt
-این دستور، فایل requirements.txt را به درون پوشه‌ی code کپی می‌کند
-#
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-این دستور توسط ابزار pip نیازمندی‌های درون requirements.txt را درون کانتینر نصب می‌کند
-#
-COPY . /code
-این دستور تمامی محتوای پوشه‌ی فعلی را درون پوشه‌ی code کپی می‌کند
-#
-CMD ["python", "service1.py"]
-این دستور فایل پایتون نهایی را در کانتینر اجرا می‌کند.
 ```
+این خط بیانگر پوشه‌ی کار داکر است که در کانتینر ساخته شده، پوشه‌ی /code ساخته می‌شود و کارها در آن انجام می‌شود.
+```dockerfile
+COPY ./requirements.txt /code/requirements.txt
+```
+این دستور، فایل requirements.txt را به درون پوشه‌ی code کپی می‌کند
+```dockerfile
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+```
+این دستور توسط ابزار pip نیازمندی‌های درون requirements.txt را درون کانتینر نصب می‌کند
+```dockerfile
+COPY . /code
+```
+این دستور تمامی محتوای پوشه‌ی فعلی را درون پوشه‌ی code کپی می‌کند
+```dockerfile
+CMD ["python", "service1.py"]
+```
+این دستور فایل پایتون نهایی را در کانتینر اجرا می‌کند.
+
 
 
 
